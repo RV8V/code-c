@@ -17,10 +17,10 @@ int main(void) {
   char *strings[] = { "o", "s", "d" };
 
   srand(time(NULL));
-  for (short i = 0; i < sizeof(nums - 1); i += 1)
+  for (short i = 0; i < sizeof(nums - 1) / 4; i += 1)
     nums[i] = i;
 
-  for (short i = 0; i < sizeof(nums - 1); i += 1) {
+  for (short i = 0; i < sizeof(nums - 1) / 4; i += 1) {
     r = (rand() % sizeof(nums)) + 1;
     temp = nums[i];
     nums[i] = nums[r];
