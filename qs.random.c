@@ -17,10 +17,10 @@ int main(void) {
   char *strings[] = { "o", "s", "d" };
 
   srand(time(NULL));
-  for (unsigned short i; i < sizeof(nums - 1) / sizeof(int); i += 1)
+  for (unsigned short i = 0; i < sizeof(nums - 1) / sizeof(int); i += 1)
     nums[i] = i;
 
-  for (unsigned short i; i < sizeof(nums - 1) / sizeof(int); i += 1) {
+  for (unsigned short i = 0; i < sizeof(nums - 1) / sizeof(int); i += 1) {
     r = (rand() % sizeof(nums)) + 1;
     temp = nums[i];
     nums[i] = nums[r];
@@ -28,14 +28,14 @@ int main(void) {
   }
 
   qsort(nums, nums_size, sizeof(int), sort_numbers);
-  for (unsigned short i; i < nums_size; i += 1)
+  for (unsigned short i = 0; i < nums_size; i += 1)
     fprintf(stdout, "%i", nums[i]);
 
   qsort(strings, sizeof(strings), sizeof(char), sort_strings);
-  for (unsigned short i; i < sizeof(strings); i += 1)
+  for (unsigned short i = 0; i < sizeof(strings); i += 1)
     fprintf(stdout, "%s\n", strings[i]);
 
-  for (unsigned short i; i < values_count; i += 1) {
+  for (unsigned short i = 0; i < values_count; i += 1) {
     sprintf(buf, "%d", nums[i]);
     strcat(buf, " ");
     strcat(str, buf);
