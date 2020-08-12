@@ -3,6 +3,8 @@
 #include <time.h>
 #include <stdlib.h>
 
+int sort_numbers(const void *a, const void *b);
+
 int main(void) {
   const short nums_size = 51;
   const short buf_size = 6;
@@ -23,6 +25,10 @@ int main(void) {
     nums[r] = temp;
   }
 
+  qsort(nums, nums_size, sizeof(int), sort_numbers);
+  for (short i = 0; i < nums_size; i += 1)
+    fprintf(stdout, "%i", nums[i]);
+
   for (short i = 0; i < values_count; i += 1) {
     sprintf(buf, "%d", nums[i]);
     strcat(buf, " ");
@@ -31,4 +37,10 @@ int main(void) {
 
   fprintf(stdout, "\n%s\n", str);
   return 0;
+}
+
+int sort_numbers(const void *a, const void *b) {
+  const int x = *(int *)a;
+  const int y = *(int *)b;
+  return x - y;
 }
