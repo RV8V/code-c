@@ -22,7 +22,8 @@ int main(int argc, char *argv[]) {
   system(output);
   fprintf(stdout, "%s\n", "press enter to start program");
   getchar();
-  const char *start = file_out;
+  const char point[3] = "./";
+  const char *start = strcat(point, file_out);
   system(start);
   fprintf(stdout, "%m\n");
   return 0;
