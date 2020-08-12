@@ -3,7 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 
-int main(const int argc, const char *argv[]) {
+int main(const unsigned int argc, const char *argv[]) {
   if (argc < 3) {
     fprintf(stdout, "%s\n", "not specified code listing extention .c and .out");
     return 1;
