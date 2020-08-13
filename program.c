@@ -4,13 +4,17 @@
 #include <unistd.h>
 
 int main(const unsigned int argc, const char *argv[]) {
-  if (argc < 3) {
+  if (argc < 3) goto less_args;
+  if (argc > 3) goto more_args;
+
+  less_args: {
     fprintf(stdout, "%s\n", "not specified code listing extention .c and .out");
-    return 1;
+    exit(1);
   }
-  if (argc > 3) {
+
+  more_args: {
     fprintf(stdout, "%s\n", "there must be one file with the extention .c and .out");
-    return 1;
+    exit(1);
   }
 
   char output[100] = "gcc -g -o ";
