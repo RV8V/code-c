@@ -1,5 +1,5 @@
-#ifndef ARRAY_H
-#define ARRAY_H
+#ifndef EXAMPLE_TEST
+#define EXAMPLE_TEST
 
 #include <math.h>
 #include <stdio.h>
