@@ -1,5 +1,5 @@
-#ifndef EXAMPLE_TEST
-#define EXAMPLE_TEST
+#ifndef EXAMPLE_TEST_H
+#define EXAMPLE_TEST_H
 
 #include <math.h>
 #include <stdio.h>
