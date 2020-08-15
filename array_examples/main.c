@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "example.test.h"
-#include "test.h"
+#include "array.test.h"
 
 
 int main(int argc, char *argv[]) {
