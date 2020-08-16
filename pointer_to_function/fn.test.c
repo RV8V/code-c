@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void foo_a() {
+void foo_a(void) {
   printf("%s\n", __FUNCTION__);
 }
 
-void foo_b() {
+void foo_b(void) {
   printf("%s\n", __FUNCTION__);
 }
 
-void foo_c() {
+void foo_c(void) {
   printf("%s\n", __FUNCTION__);
 }
 
 typedef int *pint;
-typedef void (*pfn_v)();
+typedef void (*pfn_v)(void);
 
 int main(int argc, char const *argv[]) {
   pint pa, pb, pc;
