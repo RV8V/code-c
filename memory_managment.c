@@ -31,11 +31,9 @@ int main(int argc, char const *argv[]) {
   c_pointer[n_s] = '\0';
   printf("%s\n", c_pointer);
 
-  if (c_pointer != NULL)
-    free(c_pointer);
-  if (m_pointer != NULL)
-    free(m_pointer);
+  if (c_pointer != NULL) free(c_pointer);
+  if (m_pointer != NULL) free(m_pointer);
   c_pointer = NULL;
-  m_pointer = NULL;    
+  m_pointer = NULL;
   return 0;
 }
