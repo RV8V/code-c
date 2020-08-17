@@ -1,25 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void foo_a(void) {
-  printf("%s\n", __FUNCTION__);
-}
+void foo_a(void);
+void foo_b(void);
+void foo_c(void);
 
-void foo_b(void) {
-  printf("%s\n", __FUNCTION__);
-}
-
-void foo_c(void) {
-  printf("%s\n", __FUNCTION__);
-}
-
-unsigned int test_a(unsigned int a, int argc) {
-  return a + argc;
-}
-
-unsigned int test_b(unsigned int b, int argc) {
-  return b + argc;
-}
+unsigned int test_a(unsigned int a, int argc);
+unsigned int test_b(unsigned int b, int argc);
 
 typedef int *pint;
 typedef void (*pfn_v)(void);
@@ -66,4 +53,24 @@ int main(int argc, char const *argv[]) {
   pf = &foo_c;
   (*pf)();
   return 0;
+}
+
+void foo_a(void) {
+  printf("%s\n", __FUNCTION__);
+}
+
+void foo_b(void) {
+  printf("%s\n", __FUNCTION__);
+}
+
+void foo_c(void) {
+  printf("%s\n", __FUNCTION__);
+}
+
+unsigned int test_a(unsigned int a, int argc) {
+  return a + argc;
+}
+
+unsigned int test_b(unsigned int b, int argc) {
+  return b + argc;
 }
