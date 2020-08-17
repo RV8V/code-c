@@ -5,8 +5,8 @@ void foo_a(void);
 void foo_b(void);
 void foo_c(void);
 
-unsigned int test_a(unsigned int a, int argc);
-unsigned int test_b(unsigned int b, int argc);
+unsigned int test_a(unsigned int, int);
+unsigned int test_b(unsigned int, int);
 
 typedef int *pint;
 typedef void (*pfn_v)(void);
