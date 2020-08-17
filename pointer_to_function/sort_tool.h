@@ -5,6 +5,12 @@
 
 #define TEST_1
 
+#ifdef TEST_0
+typedef struct { int data; } Test;
+
+typedef bool (*pf_compare)(struct Test, struct Test);
+void ia_bubble_sort(struct Test *, struct Test *, pf_compare);
+
 #ifdef TEST_1
 typedef /*int*/ bool (*pf_compare)(unsigned, unsigned); // pointer to compare function
 void ia_bubble_sort(int *, unsigned, pf_compare);
