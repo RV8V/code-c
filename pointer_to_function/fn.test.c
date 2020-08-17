@@ -28,7 +28,7 @@ typedef unsigned int (*pfn_s_i)(unsigned int, int);
 int main(int argc, char const *argv[]) {
   pint pa, pb, pc;
   pfn_v pf_arr[3];
-  pfn_s_i pf_s_i_arr[1];
+  pfn_s_i pf_s_i_arr[2];
 
   pf_s_i_arr[0] = &test_a;
   pf_s_i_arr[1] = &test_b;
