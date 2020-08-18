@@ -21,4 +21,4 @@ typedef struct { int id; char *str; } Test2;
 void input_output_struct_a(void);
 void input_output_struct_b(void);
 
-#elif
+#endif
