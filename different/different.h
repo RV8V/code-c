@@ -7,8 +7,8 @@
 void strcopy_a(char *, char *);
 void strcopy_b(char *, char *);
 void strcopy_c(char *, char *);
+#endif
 
 #elif defined(TEST_1)
-#endif
 
 #endif
