@@ -18,3 +18,6 @@ example.test.o: example.test.c example.test.h
 limits.o: limits.c limits.h
 	$(CC) -o0 -g3 -Wall -c limits.c -o limits.o
 	$(CC) -masm=intel -g3 -Wall -c limits.c -S
+
+clean:
+	rm -rf *.s *.o *.test	
