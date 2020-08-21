@@ -1,8 +1,6 @@
-#include <stdio.h>
-#include <limits.h>
-#include <float.h>
+#include "limits.h"
 
-int main(int argc, char const *argv[]) {
+void print_size_of_types() {
   printf("signed char min    = %14d, signed char max    = %14d\n", SCHAR_MIN, SCHAR_MAX);
   printf("unsigned char min  = %14u, unsigned char max  = %14u\n", 0, UCHAR_MAX);
   printf("signed short min   = %14d, signed short max   = %14d\n", SHRT_MIN, SHRT_MAX);
@@ -13,5 +11,4 @@ int main(int argc, char const *argv[]) {
   printf("unsigned long min  = %14u, unsigned long max = %14lu\n", 0, LONG_MAX);
   printf("float  min = %14e, float max  = %14e\n", FLT_MIN, FLT_MAX);
   printf("double min = %14e, double max = %14e\n", DBL_MIN, DBL_MAX);
-  return 0;
 }
