@@ -1,4 +1,5 @@
 CC = gcc
+APP = test.test
 
 define build-obj-different
   $(CC) -o0 -g3 -Wall -c different.c -o different.o
@@ -6,7 +7,7 @@ define build-obj-different
 endef
 
 test.out: main.o different.o example.test.o limits.o
-	$(CC) -Wall main.o different.o example.test.o limits.o -o test.test
+	$(CC) -Wall main.o different.o example.test.o limits.o -o $(APP)
 
 main.o: main.c main.h different.h example.test.h limits.h
 	$(CC) -o0 -g3 -Wall -c main.c -o main.o
