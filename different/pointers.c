@@ -14,11 +14,11 @@ int main(int argc, char const *argv[]) {
   printf("value a is: \t\t0x%08X\n", a);
 
   unsigned int *p_a = &a;
-  //printf("value p_a is: \t\t0x%08d\n", (unsigned int)p_a);
+  printf("value p_a is: \t\t0x%08d\n", (unsigned int)p_a);
   printf("value *p_a is: \t\t0x%08d\n", *p_a);
   *p_a = 0xEF222222;
   unsigned char uch[10] = { 0x33, 0x64, 0x65, 0x88, 0x32 };
-  //printf("value uch is: \t\t0x%08d\n", (unsigned int)uch);
+  printf("value uch is: \t\t0x%08d\n", (unsigned int)uch);
 
   unsigned int **p_p_a;
   p_a = &a;
