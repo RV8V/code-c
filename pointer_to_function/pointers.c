@@ -69,6 +69,9 @@ int main(int argc, char const *argv[]) {
   st_list.modify_name(st + 2, "hello world");
   for (int i = 0; i < st_count; i++) print_student(st + i);
 
+  st_list.delete_pos(st, 4, &st_count);
+  for (int i = 0; i < st_count; i++) print_student(st + i);
+
   return 0;
 }
 
