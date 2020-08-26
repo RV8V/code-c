@@ -49,16 +49,16 @@ int main(int argc, char const *argv[]) {
   float i = 2, a = 2., b = 3., res = 0.;
   do {
     (*fns_arr)(a, b, &res);
-  //  fns_arr++;
+    fns_arr++;
   } while((int)i-- > 0);
 
   struct Student st[20];
   unsigned int st_count = 0, g = 20;
+
   do {
     add_student(st + st_count, &st_count, "name", 2 + g, 18 + g);
     if (g == 1) break;
-  }
-  while(g--> 0);
+  } while(g--> 0);
 
   for (int i = 0; i < st_count; i++) print_student(st + i);
   printf("student counter: %d\n\n", st_count);
