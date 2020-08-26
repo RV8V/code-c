@@ -1,4 +1,12 @@
 #include <stdio.h>
+#include <string.h>
+
+struct Test {
+  unsigned int age;
+  unsigned char name[10];
+};
+
+void print_struct_data(void *);
 
 int main(int argc, char const *argv[]) {
   unsigned int a = 0xFE340056;
@@ -22,5 +30,14 @@ int main(int argc, char const *argv[]) {
   **p_p_a = 0xB2182490;
   printf("%d\n", a);
 
+  struct Test test;
+  test.age = 20;
+  strcpy(test.name, "test");
+  print_struct_data((void *)&test);
+
   return 0;
+}
+
+void print_struct_data(void *p_str) {
+  printf("struct age: \t%d\nstruct name: \t%s\n", (*(struct Test *)p_str).age, (*(struct Test *)p_str).name);
 }
