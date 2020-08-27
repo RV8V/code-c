@@ -2,6 +2,7 @@
 
 void *pointer_test_a(void const *, long int const **);
 void ***d_pointer_test_a(char const **);
+unsigned short int const **a_d_p_a(void *[]);
 
 int main(int argc, char const **argv) {
   int num = 123, *pr2, **pr1;
@@ -38,6 +39,7 @@ int main(int argc, char const **argv) {
 
   pointer_test_a((void const *)(p_i_a), (long int const **)(d_p_i_a));
   d_pointer_test_a((char const **)(p_i_a));
+  a_d_p_a((void **)(p_i_a));
 }
 
 void *pointer_test_a(void const *p_a, long int const **d_p_a) {
@@ -53,4 +55,10 @@ void *pointer_test_a(void const *p_a, long int const **d_p_a) {
 
 void ***d_pointer_test_a(char const **d_poiter) {
   return (void ***)(&d_poiter);
+}
+
+unsigned short int const **a_d_p_a(void *a[]) {
+  printf("address1: %p\n", a);
+  printf("address2: %p\n", *a);
+  return (unsigned short int const **)(&a);
 }
