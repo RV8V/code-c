@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+void *pointer_test_a(void const *, long int const **);
+void ***d_pointer_test_a(char const **);
+
 int main(int argc, char const **argv) {
   int num = 123, *pr2, **pr1;
   pr2 = &num; pr1 = &pr2;
@@ -31,5 +34,23 @@ int main(int argc, char const **argv) {
 
   printf("address1: %p\n", &i_a);
   printf("address2: %p\n", p_i_a);
-  printf("address3: %p\n", *d_p_i_a);
+  printf("address3: %p\n\n", *d_p_i_a);
+
+  pointer_test_a((void const *)(p_i_a), (long int const **)(d_p_i_a));
+  d_pointer_test_a((char const **)(p_i_a));
+}
+
+void *pointer_test_a(void const *p_a, long int const **d_p_a) {
+  char const ***t_p_a = (char const ***)(&d_p_a);
+  printf("address -1: %p\n", d_p_a);
+  printf("address 0: %p\n", *t_p_a);
+  unsigned short int const **p_pointer = (unsigned short int const **)(&p_a);
+  printf("address 1: %p\n", p_a);
+  printf("address 2: %p\n", *p_pointer);
+  printf("value 0: %d\n", ***t_p_a);
+  return (void *)(*p_pointer);
+}
+
+void ***d_pointer_test_a(char const **d_poiter) {
+  return (void ***)(&d_poiter);
 }
