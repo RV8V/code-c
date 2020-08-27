@@ -6,7 +6,8 @@ int main(argc, argv)
 {
   char symbol;
   char* word_of_symbols;
-  char** sentence_of_worlds;
+  char** sentence_of_words;
+  char* _sentence_of_words[1];
   char*** paragraph_of_sentences;
   char**** and_so_on;
 }
