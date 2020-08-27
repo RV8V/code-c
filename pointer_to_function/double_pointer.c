@@ -22,6 +22,14 @@ int main(int argc, char const **argv) {
   printf("Address of Pointer pr1 is: %p\n\n", &pr1);
 
   if (num == *pr2 == **pr1) printf("%s\n", "ok");
-  if (&num == pr2 == *pr1) printf("%s\n", "ok");
+  //if (&num == pr2 == *pr1) printf("%s\n", "ok");
   if (&pr2 == pr1) printf("%s\n", "ok");
+
+  short int i_a = 10;
+  long int *p_i_a = (long int *)(void *)(&i_a);
+  short int **d_p_i_a = (short int **)(void **)(&p_i_a);
+
+  printf("address1: %p\n", &i_a);
+  printf("address2: %p\n", p_i_a);
+  printf("address3: %p\n", *d_p_i_a);
 }
