@@ -1,0 +1,9 @@
+Introduction
+============
+
+Some snippets of C code: array examples, structures, memory management, alignment, bit fields, dynamic memory, preprocessor directives, pointers, abstruct data type
+
+License and Authors
+===================
+
+Author:: Ruslan Volovik <rv.volovik88@gmail.com>
