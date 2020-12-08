@@ -16,50 +16,5 @@ int main(void) {
   }/
   OemToChar(s, s);*/
 
-  char arr[10][21];
-  int i, x, y;
-  int ox, oy;
-  int ax, ay;
-  char key;
-
-  i = 0, x = 10, y = 5;
-  ax = ay = 5;
-
-  srand(time(NULL));
-
-  do {
-    sprintf(*(arr + 0), "####################");
-    for (i = 1; i < 9; ++i)
-      sprintf(*(arr + i), "#                  #");
-    sprintf(*(arr + 9), "####################");
-
-    *(*(arr + y) + x) = '@';
-    *(*(arr + ax) + ay) = '&';
-
-    system("clear");
-
-    i = 0;
-    for (; i < 10; ++i)
-      printf("%s\n", *(arr + i));
-
-    scanf("%c", &key);
-
-    ox = x;
-    oy = y;
-
-    if (key == 'w') y--;
-    else if (key == 's') y++;
-    else if (key == 'a') x--;
-    else if (key == 'd') x++;
-
-    printf("%d\n", *(*(arr + x) + y));
-
-    if (*(*(arr + x) + y) == '#')
-      x = ox; y = oy;
-
-    if (x == ax && y == ay)
-      ax = rand() * 1.0 / RAND_MAX * 18 + 1, ay = rand() * 1.0 / RAND_MAX * 8 + 1;
-
-  } while(key != 'e');
   return 0;
 }
