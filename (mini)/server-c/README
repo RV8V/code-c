@@ -1,0 +1,21 @@
+Introduction
+============
+
+http server
+
+Example of client/server communication based on tcp protocol
+===================
+
+cd extclib && make
+gcc client.c extclib/extclib.o -o client
+gcc server.c extclib/extclib.o -o server
+./server
+echo "hello, world" | ./client
+
+cd - && make
+open 127.0.0.1:7545
+
+License and Authors
+===================
+
+Author:: Ruslan Volovik <rv.volovik88@gmail.com>
